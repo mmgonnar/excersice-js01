@@ -1,24 +1,14 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import { adultAgeStandard } from "./constants/constants"
+import { validateAge } from "./lib/validateAge"
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+// 1. VALIDADOR DE EDAD
+const result1 = validateAge(13, adultAgeStandard)
+console.log(result1)
 
-setupCounter(document.querySelector('#counter'))
+const result2 = validateAge(25, adultAgeStandard)
+console.log(result2)
+
+// DOM - VISTAS
+// 1. SELECCIONAR
+
+// 2. MANIPULAR
